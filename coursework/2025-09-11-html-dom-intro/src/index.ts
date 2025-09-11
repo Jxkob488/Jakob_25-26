@@ -2,11 +2,16 @@ const counterButton = document.getElementById('counterButton') as HTMLButtonElem
 const counter = document.getElementById('counter') as HTMLParagraphElement;
 
 const decreaseButton = document.getElementById('decreaseButton') as HTMLButtonElement;
+const increment = document.getElementById('increment') as HTMLInputElement;
+const select = document.getElementById('incrementValues') as HTMLSelectElement
 
 let clickCount = 0;
+select.addEventListener('change', () => {
+    increment.value = select.value;
+})
 
 counterButton.addEventListener('click', () => {
-    clickCount++;
+    clickCount+= parseInt(increment.value);
     counter.textContent = `${clickCount}` ;
         if (clickCount > 0) {
         counter.style.color = "black"
@@ -14,7 +19,7 @@ counterButton.addEventListener('click', () => {
 })
 
 decreaseButton.addEventListener('click', () => {
-    clickCount--;
+    clickCount-= parseInt(increment.value);
     counter.textContent = `${clickCount}` ;
     if (clickCount < 0) {
         counter.style.color = "red"
