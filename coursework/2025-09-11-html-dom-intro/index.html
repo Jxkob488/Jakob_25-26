@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Startercode</title>
-</head>
-
-<body>
-    <p>Increment how much?</p>
-    <select id="incrementValues">
-        <option value="10">10</option>
-        <option value="100">100</option>
-        <option value="1000">1000</option>
-    </select>
-    <input type="number" name="increment" id="increment" placeholder="Increment factor">
-
+ 
+    <style>
+        input {
+            padding: 5px;
+            margin-left: 5px;
+        }
+    </style>
+  </head>
+  <body>
+ 
+    <p>Imgrement how much</p>
+    <select name="ImgrementSelect" id="ImgrementSelect">
+      <option value="10">10</option>
+      <option value="100">100</option>
+      <option value="1000">1000</option>
+      </select>
+ 
+     
+     
+    <input type="number" name="Imgrement" id="Imgrement"
+    placeholder="Imgrement factor" />
     <hr />
-
+ 
     <button id="counterButton">Click to increase</button>
     <p id="counter">0</p>
-    <button id="decreaseButton"> CLick to decrease</button>
-
+ 
+    <button id="count">Click to decrease</button>
     <script src="./src/index.ts" type="module"></script>
-</body>
-
+  </body>
 </html>
+ 
